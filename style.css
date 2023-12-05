@@ -6,7 +6,7 @@
 html{
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 40px;
 }
 body{
     display: flex;
@@ -24,10 +24,11 @@ body{
     height: 80svh;
 
 }
+
 .number-container .result{
     height: 15svh;
     background-color: #F0ECE5;
-    border-bottom: 2px solid #161A30;
+    border-bottom: 4px solid #161A30;
     text-align: right;
     padding: 20px 20px 0 0;
 }
@@ -37,7 +38,7 @@ body{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 
-    gap: 2px;
+    gap: 4px;
 }
 .number > div{
     background-color: #FCF5ED;
@@ -54,36 +55,64 @@ body{
 }
 .last-calculations{
     background-color: #B6BBC4;
+    width: 18svw;
     height: 80svh;
     font-weight:bold;
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     color:#161A30;
-    border-left: 2px solid #161A30;
+    border-left: 4px solid #161A30;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .last-calculations span{
-    border-bottom: 2px solid #161A30;
+    border-bottom: 4px solid #161A30;
 }
-.last-calculations button{
+.btn{
+    display: none;
     margin-top: 10px;
-    width: 70%;
-    height: 5%;
+    width: 100%;
+    height: 65px;
     background-color: #161A30;
     border: none;
-    border-radius: 12px;
+    border-radius: 50px;
     color:#FCF5ED;
     font-weight:bold;
     transition: .2s ease-in-out all;
+    font-size: 25px;
+    
 }
-.last-calculations button:hover{
+.active{
+    display: block;
+}
+.btn:hover{
     opacity: 80%;
     cursor: pointer;
 }
 .number > div:hover{
     opacity: 90%;
     cursor: pointer;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    position: relative;
+}
+.previous-number{
+    color: grey;
+}
+.current-number{
+    font-size: 40px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+}
+.item-hstr{
+    padding-top: 10px;
+    list-style-type: none;
+
 }

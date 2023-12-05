@@ -5,24 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"/>
 </head>
 <body>
     
     <div class="number-container">
-        <div class="result"><p>RESULT</p></div>
-        <div class="number" onclick="click()">
-            <div class="n">C</div>
-            <div class="n">2^</div>
-            <div class="n">:</div>
-            <div class="n">X</div>
+        <div class="result">
+            <div class="previous-number">
+                <p></p>
+                <p class="math-sing"></p>
+            </div>
+            <p class="current-number"></p>
+        </div>
+        <div class="number">
+            <div class="clear">C</div>
+            <div class="operator">2^</div>
+            <div class="operator">:</div>
+            <div class="operator">*</div>
             <div class="n">7</div>
             <div class="n">8</div>
             <div class="n">9</div>
-            <div class="n">-</div>
+            <div class="operator">-</div>
             <div class="n">4</div>
             <div class="n">5</div>
             <div class="n">6</div>
-            <div class="n">+</div>
+            <div class="operator">+</div>
             <div class="n">1</div>
             <div class="n">2</div>
             <div class="n">3</div>
@@ -32,10 +39,14 @@
             <div class="n">.</div>
         </div>
     </div>
-    <div class="last-calculations">
+    <div  data-simplebar  data-simplebar-auto-hide="false"  class="last-calculations">
         <span>Last calculations</span>
-        <button onclick="click()">clear</button>
+        <button class="btn">clear history</button>
+        <ul class="calculations-hstr">
+
+        </ul>
     </div>
 <script src="/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 </body>
 </html>
